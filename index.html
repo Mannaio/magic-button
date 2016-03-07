@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>A Pen by  Tommaso</title>   
+ 	<link rel="stylesheet" href="css/style.css">
+ 	<link rel="javascript" type="text/javascript" href="js/hover.js">
+  </head>
+  <body>
+    <a href="" class=""><span class="">Hover me</span></a>
+  </body>
+  <script type="text/javascript">
+
+    var cell =document.getElementsByTagName('a');
+    
+    for(var i=0;i<cell.length;i++){
+        cell[i].addEventListener('mouseover',onhover,false);
+        cell[i].addEventListener('mouseout',omoveout,false);
+    }
+
+    function onhover(){
+        this.setAttribute("class", "hover");
+    }
+
+    function omoveout(){
+        this.removeAttribute("class", "hover");
+    }
+
+  </script>
+</html>
+
